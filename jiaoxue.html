@@ -26,7 +26,7 @@ body .site-tips p{margin: 0;}
 .android img{display:block;width:225px;}
 .android span{display:block;text-align:center;height:20px;line-height:20px;margin-top:10px;}
 
-	*{margin:0; padding:0;}
+	*{margin:0; padding:0;max-width: 490px;}
 	a{text-decoration: none;}
 	img{max-width: 100%; height: auto;}
 	.weixin-tip{display: none; position: fixed; left:0; top:0; bottom:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80);  height: 100%; width: 100%; z-index: 1000;}
@@ -145,14 +145,14 @@ p {
 				<p><i class="layui-icon">&#xe63b;</i>安卓&苹果APP下载</p><p>
 				</p><p>点击免费下载</p>
 			</a>
-		</li> 	
+		</li><!-- 头部 	
 		<li style="background:#1AA094;">
-			<a href="/jiaoxue.html" target="_blank">
-				<p>IOS不能安装？安装好了打不开？</p><p>
-				</p><p>点击查看安装教程</p>
+			<a href="https://hiapp.net/xjsapp" target="_blank">
+				<p>IOS不闪退版APP</p><p>
+				</p><p>点击下载(仅对会员开放)</p>
 			</a>
 		</li> 
-		<!-- 头部
+		
 		<li style="background:#01aaed;">
 			<a href="http://www.fuliren.life" target="_blank">
 				<p>地址3点击访问</p><p>
@@ -194,7 +194,7 @@ p {
 </div>
 
 <!--down teacher  教程-->
-<div id="down_teacher" class="down_teacher"  style="display:none;position: absolute; top: 0px; left: 0px; width: 100%; animation-duration: 1000ms;z-index: 99999;background: #ebebeb;">
+<div id="down_teacher" class="down_teacher"  style="display:block;position: absolute; top: 0px; left: 0px; width: 100%; animation-duration: 1000ms;z-index: 999999;background: #ebebeb;">
     <div class="download-cb">
         <p class="download-img">
         </p>
@@ -225,77 +225,5 @@ p {
 </div>
 
 </body>
-
-<script type="text/javascript" src="//www.shareinstall.com.cn/js/page/jshareinstall.min.js?v=b2fa2a4c30"></script>
-
-<script type="text/javascript">
-        $(window).on("load",function(){
-	        var winHeight = $(window).height();
-			function is_weixin() {
-			    var ua = navigator.userAgent.toLowerCase();
-			    if (ua.match(/MicroMessenger/i) == "micromessenger") {
-			        return true;
-			    } 
-			    else if (ua.match(/qq/i) == "qq") {
-			        return true;
-			    }
-				else {
-			        return false;
-			    }
-			}
-			var isWeixin = is_weixin();
-			if(isWeixin){
-				$(".weixin-tip").css("height",winHeight);
-	            $(".weixin-tip").show();
-			}
-        })
-	
-        //错误处理：确保app始终能正常的安装
-        var timer = setTimeout(
-          function () {
-            var button = document.getElementById("downloadButton");
-            button.style.visibility = "visible";
-            button.onclick = function () {
-              var ua = navigator.userAgent;
-              if (ua.indexOf(" MicroMessenger/") > -1) {
-                //微信中显示遮罩提示在浏览器中打开
-                var div = document.createElement("div");
-                div.innerHTML = "<div style='font-size:2rem;color:#fff;text-align:center;" +
-                  "position:fixed;left:0;top:0;background:rgba(0,0,0,0.8);filter:alpha(opacity=50);" +
-                  "width:100%;height:100%;z-index:10000;'>点击右上角在浏览器中打开</div>";
-                document.body.appendChild(div);
-              } else {
-                if (ua.indexOf("Android") > -1) {
-                  //直接下载apk
-                  //window.location="apk地址";
-                } else if (ua.indexOf("iPhone") > -1 || ua.indexOf("iPad") > -1 || ua.indexOf("iPod") > -1) {
-                  document.getElementById("down_teacher").style.display = 'block';
-                  //直接进入appstore
-                  //window.location="appstore地址";
-                }
-              }
-            }
-          }, 5000);
-		
-    var data = ShareInstall.parseUrlParams();//shareinstall.js中提供的工具函数，解析url中的所有查询参数
-    new ShareInstall({
-        appKey : 'BFBK22EHF7EB7F',
-        onready : function() {
-            //ShareInstall已成功回调，清除定时器
-            clearTimeout(timer);
-            timer = null;
-            var m = this, button = document.getElementById("downloadButton");
-            button.style.visibility = "visible";
-
-            //用户点击某个按钮时(假定按钮id为downloadButton)，安装app
-            button.onclick = function() {
-                m.wakeupOrInstall();				
-            }
-        }
-    }, data);
-  
-		
-		
-	</script>
 
 </html>
