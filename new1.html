@@ -98,7 +98,7 @@
     <div class="content" id="app">
         <div class="btns">
             <h4>邀请码</h4>
-            <div class="down-btn" ><input class="copy" type="text" id="invite" v-model="invite"></div>
+            <div class="down-btn" ><input type="text" id="invite" v-model="invite"></div>
             <div class="down-btn" οnclick="openu()" /><img src="./img/and.png"></a></div>
             <div class="down-btn" οnclick="test()"/><img src="img/ios.png"></div>
             <div class="down-btn" v-if="/iphone|ipad|ipod/.test(ua)"><a href="jiaoxue.html"><img src="img/course.png"></a></div>
@@ -110,7 +110,7 @@
 <script LANGUAGE="JavaScript">
     function openu(){
         var s = document.getElementById("invite");
-        location.href="https://www.xjys.in/download.php?"+"invite="+encodeURI(s.value);
+        location.href="https://www.xjys.in/download.php?"+"invite="+id;
     }
 </script>
 
