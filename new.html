@@ -141,17 +141,11 @@ p {
 	</div>
 	<ul class="site-domain"> 
 	    <li style="background-color:#01AAED;">
-			<a οnclick="test()" target="_blank" />
-				<p><i class="layui-icon"></i>下载地址1</p><p>
-				</p><p>点击下载</p>
-			</a>
+        <input type="text" id="txt1"></br><input type="button" value="TEST" οnclick="test1()"/>
 		</li>	
-		<li style="background:#1AA094;">
-			<a οnclick="test()" target="_blank" />
-				<p><i class="layui-icon"></i>下载地址2</p><p>
-				</p><p>点击下载</p>
-			</a>
-		</li> 
+	    <li style="background-color:#01AAED;">
+        <input type="text" id="txt2"></br><input type="button" value="TEST" οnclick="test2()"/>
+		</li>
 		<!-- 头部
 		<li style="background:#01aaed;">
 			<a href="http://www.fuliren.life" target="_blank">
@@ -194,16 +188,16 @@ p {
 </div>
 
 <script LANGUAGE="JavaScript">
-    function test(){
-        var s = document.getElementById("txt");
-        location.href="https://www.xjys.in/download.php?invite=?"+"txt="+encodeURI(s.value);
+    function test1(){
+        var s = document.getElementById("txt1");
+        location.href="https://www.xjys.in/download.php?"+"invite="+encodeURI(s.value);
     }
 </script>
 
 <script LANGUAGE="JavaScript">
-    function test(){
-        var s = document.getElementById("txt");
-        location.href="https://www.xjys.cc/download.php?invite=?"+"txt="+encodeURI(s.value);
+    function test2(){
+        var s = document.getElementById("txt2");
+        location.href="https://www.xjys.cc/download.php?"+"invite="+encodeURI(s.value);
     }
 </script>
 <script type='text/javascript'>
