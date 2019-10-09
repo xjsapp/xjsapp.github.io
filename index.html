@@ -29,130 +29,37 @@ body .site-tips p{margin: 0;}
 	*{margin:0; padding:0;}
 	a{text-decoration: none;}
 	img{max-width: 100%; height: auto;}
-	.weixin-tip{display: none; position: fixed; left:0; top:0; bottom:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80);  height: 100%; width: 100%; z-index: 1000;}
+	.weixin-tip{display: none; position: fixed; left:0; top:0; bottom:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80);  height: 100%; width: 100%; z-index: 99999999;}
 	.weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}
 	
-	
- .mobile-preview__main___36FIk {
-    position: relative;
-    z-index: 500;
-    height: calc(100% - 55px);
-}     
-.mobile-button-model__btn-bottom___34ffq {
-    position: fixed;
-    width: 100%;
-    height: 50px;
-    font-size: 16px;
-    text-align: center;
-    /* border-top: 1px solid rgba(0,0,0,.1); */
-    box-shadow: 0 0 14px 0 rgba(0,0,0,.16);
-    cursor: pointer;
-}
-.mobile-button-model__btn-bottom-icon___33_gQ {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    margin: 9px 4px 0;
-    background-size: 32px 32px;
-    vertical-align: top;
-}
 
-.dashboard-item__btn-online-icon1___3wsCc {
-    background-image: url(https://pic.kuaizhan.com/g3/ec/a6/f9a6-f6a4-40f3-9cd2-92dbe5d7889e65);
-}      
-.mobile-button-model__btn-botton-text___1ffTB {
-    display: inline-block;
-    height: 50px;
-    line-height: 50px;
-    overflow-y: hidden;
-}
-      
-.download-tips {
-    width: 100%;
-    margin: 10% auto 0;
-}      
-      
-.sign-tip {
-    height:66px;
-    font-family: PingFangSC;
-    font-size: 15px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.6;
-    letter-spacing: normal;
-    text-align: center;
-    color: #323232;
-}
-.del-old {
-    height: 66px;
-    font-family: PingFangSC;
-    font-size: 24px;
-    font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.25;
-    letter-spacing: normal;
-    text-align: center;
-    color: #e76532;
-}
-.trust {
-    height: 66px;
-    font-family: PingFangSC;
-    font-size: 24px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #323232;
-}
-p {
-    text-align: center;
-    padding: 0;
-}
-.step {
-    font-family: PingFangSC;
-    font-size: 18px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #323232;
-}      
-.download-tips img {
-    width: 90%;
-}
 	
 </style>
 </head>
 <body>
 <div class="main">
 	<h1 class="site-h1"><i class="layui-icon">&#xe63a;</i> 香蕉社最新网址-香蕉社APP永久网址-香蕉社APP在线发布页</h1>
-	<blockquote class="layui-elem-quote">微信/QQ中不能访问，请使用浏览器打开网站！</blockquote>
+	<blockquote class="layui-elem-quote">微信中不能访问，请使用浏览器打开网站！</blockquote>
 	
 
 	<div class="site-title" style="color:red;">
 		<i class="layui-icon">&#xe60c;</i>
 		访问不了新网站请先清理浏览器缓存数据，或使用其他浏览器访问：
 	</div>
-	<ul class="site-domain"> 
+	<ul class="site-domain" id="app"> 
+	<input type="text" hidden="hidden" name="invitecode" id="invite" v-model="invite">
 	    <li style="background-color:#01AAED;">
-			<a href="javascript:;" id="downloadButton" style="visibility: visible;">
-				<p><i class="layui-icon">&#xe63b;</i>安卓&苹果APP下载</p><p>
+			<a href="javascript:;" id="btn1">
+				<p><i class="layui-icon">&#xe63b;</i>下载线路1</p><p>
 				</p><p>点击免费下载</p>
 			</a>
-		</li> 	
+		</li> 	<!-- 头部
 		<li style="background:#1AA094;">
-			<a href="/jiaoxue.html" target="_blank">
-				<p>IOS不能安装？安装好了打不开？</p><p>
-				</p><p>点击查看安装教程</p>
-			</a>
+			<a href="javascript:;" id="btn2">
+				<p><i class="layui-icon">&#xe63b;</i>下载线路2</p><p>
+				</p><p>点击免费下载</p>
 		</li> 
-		<!-- 头部
+		
 		<li style="background:#01aaed;">
 			<a href="http://www.fuliren.life" target="_blank">
 				<p>地址3点击访问</p><p>
@@ -192,25 +99,20 @@ p {
 		</li>
 	</ul>
 </div>
-
-<!--down teacher  教程-->
-<div id="down_teacher" class="down_teacher"  style="display:none;position: absolute; top: 0px; left: 0px; width: 100%; animation-duration: 1000ms;z-index: 99999;background: #ebebeb;">
-    <div class="download-cb">
-        <p class="download-img">
-        </p>
-        <div class="download-tips">
-            <p class="sign-tip">ios用户如果出现闪退，软件无法启动等情况<br/>可能因为证书签名过期原因造成的</p>
-            <p class="del-old">请删除旧版本APP<br/>官网重新下载最新版本</p>
-            <p class="trust">如何信任企业级开发者</p>
-            <p class="step">1.打开【设置】里的<span style="color: #e76532">【通用】</span></p>
-            <p><img src="https://pic.kuaizhan.com/g3/9f/d4/f523-1ba3-4c20-aa6c-be457253674060"></p>
-            <p class="step">2.【通用】里选择<span style="color: #e76532">【描述文件与设备管理】</span></p>
-            <p><img src="https://pic.kuaizhan.com/g3/59/74/121c-a687-491f-82e9-60ee1e8ddf0636"></p>
-            <p class="step">3.选择香蕉社的【企业级APP】，点击上方蓝色<span style="color: #e76532">【信任】</span>，即可完成信任并使用软件</p>
-            <p><img src="https://pic.kuaizhan.com/g3/72/69/e112-b362-4722-a775-67f96b6a5d0683"></p>
-        </div>
-    </div>
-</div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.7/dist/vue.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+    	$(function(){
+    		invite= document.getElementById("invite").value;
+    		$("#btn1").on("click",function(){
+    			jump1();
+    		});
+    	});
+    	function jump1(){
+            url = "https://www.javcili.com/?channel=app&invite="+invite;//此处拼接内容
+            window.location.href = url;
+        }
+</script>
 
 <script type='text/javascript'>
     (function(m, ei, q, i, a, j, s) {
@@ -229,13 +131,32 @@ p {
 
 <div class="weixin-tip">
 		<p>
-			<img src="https://pic.kuaizhan.com/g3/bc/46/b862-0ee8-4397-a19b-96e8936f21fa84" alt="微信打开"/>
+			<img src="https://pic.kuaizhan.com/g3/fb/21/d310-c0e0-422e-b9fe-e2f8d004c87e90" alt="微信打开"/>
 		</p>
 </div>
 
 </body>
 
-<script type="text/javascript" src="//www.shareinstall.com.cn/js/page/jshareinstall.min.js?v=b2fa2a4c30"></script>
+<script>
+var app = new Vue({
+    el: '#app',
+    data: {
+        invite: '',
+        iswx:false,
+        ua:''
+    },
+    created: function () {
+        this.ua=navigator.userAgent.toLowerCase();
+        this.invite=query('invite')
+        function query(name){
+            var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r!=null) return r[2]; return '';
+        }
+    },	
+})
+
+</script>
 
 <script type="text/javascript">
         $(window).on("load",function(){
@@ -245,9 +166,6 @@ p {
 			    if (ua.match(/MicroMessenger/i) == "micromessenger") {
 			        return true;
 			    } 
-			    else if (ua.match(/qq/i) == "qq") {
-			        return true;
-			    }
 				else {
 			        return false;
 			    }
@@ -257,54 +175,7 @@ p {
 				$(".weixin-tip").css("height",winHeight);
 	            $(".weixin-tip").show();
 			}
-        })
-	
-        //错误处理：确保app始终能正常的安装
-        var timer = setTimeout(
-          function () {
-            var button = document.getElementById("downloadButton");
-            button.style.visibility = "visible";
-            button.onclick = function () {
-              var ua = navigator.userAgent;
-              if (ua.indexOf(" MicroMessenger/") > -1) {
-                //微信中显示遮罩提示在浏览器中打开
-                var div = document.createElement("div");
-                div.innerHTML = "<div style='font-size:2rem;color:#fff;text-align:center;" +
-                  "position:fixed;left:0;top:0;background:rgba(0,0,0,0.8);filter:alpha(opacity=50);" +
-                  "width:100%;height:100%;z-index:10000;'>点击右上角在浏览器中打开</div>";
-                document.body.appendChild(div);
-              } else {
-                if (ua.indexOf("Android") > -1) {
-                  //直接下载apk
-                  //window.location="apk地址";
-                } else if (ua.indexOf("iPhone") > -1 || ua.indexOf("iPad") > -1 || ua.indexOf("iPod") > -1) {
-                  document.getElementById("down_teacher").style.display = 'block';
-                  //直接进入appstore
-                  //window.location="appstore地址";
-                }
-              }
-            }
-          }, 5000);
-		
-    var data = ShareInstall.parseUrlParams();//shareinstall.js中提供的工具函数，解析url中的所有查询参数
-    new ShareInstall({
-        appKey : 'BFBK22EHF7EB7F',
-        onready : function() {
-            //ShareInstall已成功回调，清除定时器
-            clearTimeout(timer);
-            timer = null;
-            var m = this, button = document.getElementById("downloadButton");
-            button.style.visibility = "visible";
-
-            //用户点击某个按钮时(假定按钮id为downloadButton)，安装app
-            button.onclick = function() {
-                m.wakeupOrInstall();				
-            }
-        }
-    }, data);
-  
-		
-		
-	</script>
+        })		
+</script>
 
 </html>
