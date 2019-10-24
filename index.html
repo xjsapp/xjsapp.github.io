@@ -53,13 +53,13 @@ body .site-tips p{margin: 0;}
 				<p><i class="layui-icon">&#xe63b;</i>下载线路1</p><p>
 				</p><p>点击免费下载</p>
 			</a>
-		</li> 	<!-- 头部
+		</li> 	
 		<li style="background:#1AA094;">
 			<a href="javascript:;" id="btn2">
 				<p><i class="layui-icon">&#xe63b;</i>下载线路2</p><p>
 				</p><p>点击免费下载</p>
 		</li> 
-		
+		<!-- 头部
 		<li style="background:#01aaed;">
 			<a href="http://www.fuliren.life" target="_blank">
 				<p>地址3点击访问</p><p>
@@ -99,9 +99,10 @@ body .site-tips p{margin: 0;}
 		</li>
 	</ul>
 </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.7/dist/vue.min.js"></script>
-	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-<script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.7/dist/vue.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<script type='text/javascript'>
     	$(function(){
     		invite= document.getElementById("invite").value;
     		$("#btn1").on("click",function(){
@@ -110,6 +111,19 @@ body .site-tips p{margin: 0;}
     	});
     	function jump1(){
             url = "https://www.javcili.com/?channel=app&invite="+invite;//此处拼接内容
+            window.location.href = url;
+        }
+</script>
+
+<script type='text/javascript'>
+    	$(function(){
+    		invite= document.getElementById("invite").value;
+    		$("#btn2").on("click",function(){
+    			jump2();
+    		});
+    	});
+    	function jump2(){
+            url = "http://down.avsudi.com:9200/?channel=github&invite="+invite;//此处拼接内容
             window.location.href = url;
         }
 </script>
