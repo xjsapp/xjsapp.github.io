@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>正在打開[]...</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+</head>
+<body>
+<div id="dvContent" style="display:none">
+<span id="spTime">0</span>
+</div>
+<div style="text-align:center;"><img src="static/loadding.gif" alt=""><br>最新线路加载中，請等待几秒钟...</div>
+
+<script type="text/javascript">
+    
+LoadURL();
+
+function LoadURL() {
+    var urlList = ["https://ios.xjsav.cc/","https://ios.xjsav.cc/"];
+    var time = document.getElementById("spTime").innerHTML;
+    var t = setTimeout("LoadURL()", 100);
+    if (time > 0) {
+        time--;
+        document.getElementById("spTime").innerHTML = time;
+    } else {
+        clearTimeout(t);
+        document.getElementById("dvContent").innerHTML = "";
+        window.location.href = urlList[Math.floor(Math.random() * urlList.length)];
+    }
+}
+</script>
+
+</body>
+</html>
