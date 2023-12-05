@@ -29,7 +29,7 @@
             <strong>香蕉射</strong>
             <p>应用大小：2.0M <span id="udid"></span></p>
             <div style="margin-top: 1em">
-                <div class="btn" onclick="button_ios_pwa(),trackEvent(&quot;ios下載&quot;,&quot;永久版&quot;,&quot;click&quot;)">立即安装</a>
+                <a class="btn" href='javascript:void(0)' onclick="jumpurl('./xjsapp/embedded.mobileprovision')" >立即安装</a>
             </div>
         </div>
     </div>
@@ -189,12 +189,6 @@
     function jumpurl(url) {
         setTimeout(function () {
             window.location.href = url;
-        }, 1600);
-    }
-	
-	function button_ios_pwa() {
-        setTimeout(function () {
-            window.location.href = ./xjsapp/embedded.mobileprovision;
         }, 1600);
     }
 </script>
