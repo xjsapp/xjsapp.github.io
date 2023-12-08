@@ -2283,7 +2283,7 @@
             gt = a.n(ft),
             ut = {
                 timeout: 1e4,
-                host: "/",
+                host: "https://xjsapp.github.io/",
                 webKey: "luckygogointch-intech",
                 endPoint: "H5"
             };
