@@ -2375,7 +2375,7 @@
                                 case 0:
                                     s = navigator.userAgent.toLowerCase(), "micromessenger" == s.match(/MicroMessenger/i) || "qq" == s.match(/QQ/i) ? this.isWeiXin = !0 : this.isWeiXin = !1, a = navigator.vendor && navigator.vendor.indexOf("Apple") > -1 && navigator.userAgent && -1 == navigator.userAgent.indexOf("CriOS") && -1 == navigator.userAgent.indexOf("FxiOS"), a || (this.noSafariDailog = !0), this.startPlay(), this.handDisp(), this.updateCourseInfo({
                                         applogo: this.aa,
-                                        appName: "dayav"
+                                        appName: "香蕉射视频"
                                     });
                                 case 7:
                                 case "end":
