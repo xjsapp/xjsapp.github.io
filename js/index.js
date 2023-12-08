@@ -2042,7 +2042,7 @@
                     a = t._self._c || s;
                 return a("div", {
                     staticClass: "RnDownload"
-                }, [t.RnDate ? a("h1", [t._v(t._s("今日AV" + t.RnDate.ldy_rn.name))]) : t._e(), a("div", {
+                }, [t.RnDate ? a("h1", [t._v(t._s("香蕉射视频" + t.RnDate.ldy_rn.name))]) : t._e(), a("div", {
                     staticClass: "line"
                 }), a("div", {
                     staticClass: "step1"
@@ -2058,9 +2058,9 @@
                     }
                 }, [t._v("立即下载")])]), t._m(0), a("p", {
                     staticClass: "tip"
-                }, [t._v("如果没有自动跳转，请到按照此方法进行安装:【设置-通用-设备管理-今日AV-安装】")]), t.ios16 ? t._e() : a("p", {
+                }, [t._v("如果没有自动跳转，请到按照此方法进行安装:【设置-通用-设备管理-香蕉射视频-安装】")]), t.ios16 ? t._e() : a("p", {
                     staticClass: "footer-tip"
-                }, [t._v("\n    若打开后不显示今日AV视频，则需回到本页面重新下载App\n  ")]), t.ios16 ? a("div", {
+                }, [t._v("\n    若打开后不显示香蕉射视频，请删除描述文件，重新回到此页面下载安装\n  ")]), t.ios16 ? a("div", {
                     staticClass: "line2"
                 }) : t._e(), t.ios16 ? a("div", [t._m(1), a("div", {
                     staticClass: "copy-box"
@@ -2169,7 +2169,7 @@
                     staticClass: "loadone"
                 }, [t._m(0), e("div", {
                     staticClass: "right"
-                }, [e("p", [t._v("今日AV 苹果永久版")]), e("div", {
+                }, [e("p", [t._v("香蕉射视频 苹果永久版")]), e("div", {
                     on: {
                         click: t.downloadBtn
                     }
