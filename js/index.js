@@ -2350,12 +2350,12 @@
                 },
                 created: function() {
                     var t = this;
-                    gt.a.get(ut.host + "api/luodiye/config").then((function(s) {
+                    gt.a.get(ut.host + "/api/luodiye/config").then((function(s) {
                         console.log(s.data.code, "首页"), t.btnLoading = !0, 200 === s.data.code ? (t.btnLoading = !1, t.urlDate = s.data.data) : t.$message("加载失败请刷新页面重试")
                     })).catch((function(t) {
                         console.log(t)
                     }));
-                    var s = location.protocol + "//" + location.host + location.pathname + "download.json?t=" + (new Date).getTime();
+                    var s = location.protocol + "//" + location.host +"/download.json?t=" + (new Date).getTime();
                     fetch(s).then((function(t) {
                         return t.json()
                     })).then((function(t) {
